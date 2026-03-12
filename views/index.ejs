@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<h1>🌦 Weather App</h1>
+
+<form action="/weather" method="POST">
+  <input type="text" name="city" placeholder="Enter city name" required>
+  <button type="submit">Check Weather</button>
+</form>
+
+<% if(weather){ %>
+
+<h2><%= weather.city %></h2>
+
+<img src="https://openweathermap.org/img/wn/<%= weather.icon %>@2x.png">
+
+<p>Temperature: <%= weather.temp %> °C</p>
+<p>Humidity: <%= weather.humidity %>%</p>
+<p>Weather: <%= weather.description %></p>
+
+<% } %>
+
+<% if(error){ %>
+<p style="color:red"><%= error %></p>
+<% } %>
+
+</body>
+</html>
