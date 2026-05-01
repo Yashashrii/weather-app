@@ -2,7 +2,7 @@
 
 This is a weather application built using Node.js, Express, Axios and EJS.
 
-Users can enter a city name to get:
+Users can enter a city name to get details like:
 
 - Temperature
 - Humidity
